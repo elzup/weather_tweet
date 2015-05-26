@@ -1,3 +1,7 @@
 from django.contrib import admin
+from cms.models import RainMeshMap
 
-# Register your models here.
+admin.site.register(RainMeshMap)
+
+class RainMeshMapAdmin(admin.ModelAdmin):
+    list_display = ('id', 'time_map',)

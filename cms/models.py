@@ -7,7 +7,7 @@ class MeshPosition(models.Model):
 
 class RainMeshMap(models.Model):
     """メッシュ地図"""
-    time_map = models.DateTimeField(auto_now_add=False)
+    time_map = models.DateTimeField(auto_now_add=False, unique=True)
 
 class RainMesh(models.Model):
     """メッシュ"""
