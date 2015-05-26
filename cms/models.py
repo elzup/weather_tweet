@@ -12,5 +12,5 @@ class RainMeshMap(models.Model):
 class RainMesh(models.Model):
     """メッシュ"""
     rain_rate_x10 = models.SmallIntegerField()
-    map_id = models.ForeignKey(RainMeshMap, verbose_name='メッシュ緯度経度', related_name='meshes')
-    mesh_position_id = models.ForeignKey(MeshPosition, verbose_name='メッシュ地図', related_name='meshes')
+    map = models.ForeignKey(RainMeshMap, verbose_name='メッシュ緯度経度', related_name='meshes')
+    mesh_position = models.ForeignKey(MeshPosition, verbose_name='メッシュ地図', related_name='meshes')
